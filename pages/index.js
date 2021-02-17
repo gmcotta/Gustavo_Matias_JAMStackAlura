@@ -5,6 +5,7 @@ import Header from '../src/components/core/Header';
 
 const Title = styled.h1`
   font-size: 50px;
+  margin-top: 1000px;
   color: ${({ theme }) => theme.colors.light.typography.main};
 `;
 

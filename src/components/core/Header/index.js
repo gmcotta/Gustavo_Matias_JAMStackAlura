@@ -1,21 +1,22 @@
 import React from 'react';
 
+import HeaderWrapper from './styles';
 import Logo from '../../shared/icons/Logo';
 import Dark from '../../shared/icons/Dark';
 
 export default function Header() {
   return (
-    <header>
-      <div>
+    <HeaderWrapper>
+      <HeaderWrapper.LeftContent>
         <Logo />
-      </div>
-      <div>
+      </HeaderWrapper.LeftContent>
+      <HeaderWrapper.CentralContent>
         <span>Sobre mim</span>
         <span>Projetos</span>
-      </div>
-      <div>
+      </HeaderWrapper.CentralContent>
+      <HeaderWrapper.RightContent>
         <Dark />
-      </div>
-    </header>
+      </HeaderWrapper.RightContent>
+    </HeaderWrapper>
   );
 }
