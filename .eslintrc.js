@@ -20,6 +20,6 @@ module.exports = {
   rules: {
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
     'react/jsx-props-no-spreading': 'off',
-    // 'import/prefer-default-export': 'off',
+    'arrow-parens': 'off',
   },
 };

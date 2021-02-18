@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import transformBreakpointsIntoMediaQueries from '../../../theme/utils/transformBreakpointsIntoMediaQueries';
 
 const HeaderWrapper = styled.header`
   width: 100%;
@@ -8,12 +9,21 @@ const HeaderWrapper = styled.header`
   justify-content: space-between;
   position: fixed;
   top: 0;
+  padding: 16px;
+
+  ${transformBreakpointsIntoMediaQueries({
+    md: css`{
+      padding: 24px;
+    }`,
+    lg: css`{
+      padding: 40px;
+    }`,
+
+  })}
 `;
 
 HeaderWrapper.LeftContent = styled.div`
   order: 1;
-
-  
 `;
 
 HeaderWrapper.CentralContent = styled.nav`
@@ -22,22 +32,22 @@ HeaderWrapper.CentralContent = styled.nav`
   display: flex;
   justify-content:space-around;
 
-  ${({ theme }) => css`
-      @media screen and (min-width: ${theme.breakpoints.md}px) {
-        order: 2;
-        width: 50%;
-      }
-  `}
+  ${transformBreakpointsIntoMediaQueries({
+    md: css`{
+      order: 2;
+      width: 50%;
+    }`,
+  })}
 `;
 
 HeaderWrapper.RightContent = styled.div`
   order: 2;
 
-  ${({ theme }) => css`
-      @media screen and (min-width: ${theme.breakpoints.md}px) {
-        order: 3;
-      }
-  `}
+  ${transformBreakpointsIntoMediaQueries({
+    md: css`
+    order: 3;
+  `,
+  })}
 `;
 
 export default HeaderWrapper;
