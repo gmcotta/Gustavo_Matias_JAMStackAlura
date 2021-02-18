@@ -7,19 +7,6 @@ const HeaderWrapper = styled.header`
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  position: fixed;
-  top: 0;
-  padding: 16px;
-
-  ${transformBreakpointsIntoMediaQueries({
-    md: css`{
-      padding: 24px;
-    }`,
-    lg: css`{
-      padding: 40px;
-    }`,
-
-  })}
 `;
 
 HeaderWrapper.LeftContent = styled.div`
