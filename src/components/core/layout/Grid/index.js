@@ -8,16 +8,16 @@ const Container = styled.div`
 
   ${transformBreakpointsIntoMediaQueries({
     sm: css`
-      max-width: 576px;
+      max-width: 600px;
     `,
     md: css`
-      max-width: 768px;
+      max-width: 800px;
     `,
     lg: css`
-      max-width: 1160px;
+      max-width: 1000px;
     `,
     xl: css`
-      max-width: 1222px;
+      max-width: 1200px;
     `,
   })}
 `;
@@ -76,40 +76,34 @@ const Col = styled.div`
   ${({ offset }) => {
     if (typeof offset === 'number') {
       return css`
-         ${(100 * offset) / 12}%;
-        max-width: ${(100 * offset) / 12}%;
+        margin-left: ${(100 * offset) / 12}%;
       `;
     }
     if (typeof offset === 'object') {
       return transformBreakpointsIntoMediaQueries({
         ...(offset.xs && {
           xs: css`
-            ${(100 * offset.xs) / 12}%;
-            : ${(100 * offset.xs) / 12}%;
+            margin-left: ${(100 * offset.xs) / 12}%;
           `,
         }),
         ...(offset.sm && {
           sm: css`
-            ${(100 * offset.sm) / 12}%;
-            : ${(100 * offset.sm) / 12}%;
+            margin-left: ${(100 * offset.sm) / 12}%;
           `,
         }),
         ...(offset.md && {
           md: css`
-            ${(100 * offset.md) / 12}%;
-            : ${(100 * offset.md) / 12}%;
+            margin-left: ${(100 * offset.md) / 12}%;
           `,
         }),
         ...(offset.lg && {
           lg: css`
-            ${(100 * offset.lg) / 12}%;
-            : ${(100 * offset.lg) / 12}%;
+            margin-left: ${(100 * offset.lg) / 12}%;
           `,
         }),
         ...(offset.xl && {
           xl: css`
-            ${(100 * offset.xl) / 12}%;
-            : ${(100 * offset.xl) / 12}%;
+            margin-left: ${(100 * offset.xl) / 12}%;
           `,
         }),
       });

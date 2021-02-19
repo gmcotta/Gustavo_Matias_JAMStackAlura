@@ -21,7 +21,7 @@ export default function Home() {
             height="100vh"
           >
             <Grid.Col
-              value={{ xs: 12, md: 6 }}
+              value={{ xs: 12, md: 5 }}
             >
               <span>Olá, meu nome é Gustavo</span>
               <span>E esse é meu portfolio de front-end do bootcamp JAMStack!</span>
