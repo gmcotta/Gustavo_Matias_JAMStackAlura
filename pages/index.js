@@ -23,7 +23,8 @@ export default function Home() {
             <Grid.Col
               value={{ xs: 12, md: 6 }}
             >
-              <span>Teste</span>
+              <span>Olá, meu nome é Gustavo</span>
+              <span>E esse é meu portfolio de front-end do bootcamp JAMStack!</span>
             </Grid.Col>
             <Grid.Col
               value={{ xs: 12, md: 6 }}
