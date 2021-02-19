@@ -9,6 +9,7 @@ const HeaderWrapper = styled.header`
   justify-content: space-between;
   position: fixed;
   top: 0;
+  background-color: ${({ theme }) => theme.colors.light.background.main}; 
 `;
 
 HeaderWrapper.LeftContent = styled.div`
@@ -20,11 +21,12 @@ HeaderWrapper.CentralContent = styled.nav`
   width: 100%;
   display: flex;
   justify-content:space-around;
+  background-color: yellow;
 
   ${transformBreakpointsIntoMediaQueries({
     md: css`{
       order: 2;
-      width: 50%;
+      width: 75vw;
     }`,
   })}
 `;

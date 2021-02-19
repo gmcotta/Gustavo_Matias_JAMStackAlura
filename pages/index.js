@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import Header from '../src/components/core/Header';
 import Box from '../src/components/core/layout/Box';
 import Grid from '../src/components/core/layout/Grid';
+import Text from '../src/components/core/Text';
 
 const Title = styled.h1`
   font-size: 50px;
@@ -35,8 +36,9 @@ export default function Home() {
               alignItems="center"
               backgroundColor="green"
             >
-              <span>Olá, meu nome é Gustavo</span>
-              <span>E esse é meu portfolio de front-end do bootcamp JAMStack!</span>
+              {/* variant={{xs: titleXS, md: title}} */}
+              <Text variant={{ xs: 'titleXS', lg: 'title' }} tag="h1" textAlign="center">Olá, meu nome é Gustavo</Text>
+              <Text variant={{ xs: 'subtitleXS', lg: 'subtitle' }} tag="h2" textAlign="center">E esse é meu portfolio de front-end do bootcamp JAMStack!</Text>
             </Grid.Col>
             <Grid.Col
               value={{
