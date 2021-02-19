@@ -7,6 +7,8 @@ const HeaderWrapper = styled.header`
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  position: fixed;
+  top: 0;
 `;
 
 HeaderWrapper.LeftContent = styled.div`

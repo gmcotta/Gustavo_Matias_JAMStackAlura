@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 import transformBreakpointsIntoMediaQueries from '../../../../theme/utils/transformBreakpointsIntoMediaQueries';
+import propToStyle from '../../../../theme/utils/propToStyle';
 
 const Container = styled.div`
   width: 100%;
@@ -25,12 +26,19 @@ const Container = styled.div`
 const Row = styled.div`
   display: flex;
   flex-wrap: wrap;
+  background-color: yellow;
+  ${propToStyle('height')};
 `;
 
 const Col = styled.div`
   flex-basis: 0;
   flex-grow: 1;
-  width: 100%;
+  ${propToStyle('backgroundColor')};
+
+  ${propToStyle('display')};
+  ${propToStyle('flexDirection')};
+  ${propToStyle('justifyContent')};
+  ${propToStyle('alignItems')};
 
   ${({ value }) => {
     if (typeof value === 'number') {

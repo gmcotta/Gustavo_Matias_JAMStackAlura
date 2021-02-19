@@ -14,24 +14,43 @@ const Title = styled.h1`
 export default function Home() {
   return (
     <>
-      <Box>
-        <Header />
+      <Header />
+      <Box
+        display="flex"
+        flex={1}
+        flexWrap="wrap"
+        flexDirection="column"
+      >
         <Grid.Container>
           <Grid.Row
             height="100vh"
           >
             <Grid.Col
-              value={{ xs: 12, md: 5 }}
+              value={{
+                xs: 12, lg: 6,
+              }}
+              display="flex"
+              flexDirection="column"
+              justifyContent="center"
+              alignItems="center"
+              backgroundColor="green"
             >
               <span>Olá, meu nome é Gustavo</span>
               <span>E esse é meu portfolio de front-end do bootcamp JAMStack!</span>
             </Grid.Col>
             <Grid.Col
-              value={{ xs: 12, md: 6 }}
+              value={{
+                xs: 12, lg: 6,
+              }}
+              display="flex"
+              justifyContent="center"
+              alignItems="center"
+              backgroundColor="blue"
             >
               <img
                 src="/images/home.png"
                 alt="Imagem de uma pessoa sentada em uma cadeira, usando um laptop"
+                width="100%"
               />
             </Grid.Col>
           </Grid.Row>
