@@ -27,4 +27,8 @@ export default {
       secondary: '#D4D4D4',
     },
   },
+  common: {
+    white: '#FFF',
+    blueGray: '#B1C5D0',
+  },
 };
