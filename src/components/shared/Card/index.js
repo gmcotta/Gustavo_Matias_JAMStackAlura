@@ -34,7 +34,7 @@ function Card({
           {title}
         </Text>
         {main === 'true' && (
-        <Text variant="paragraph" as="p" textAlign="center">
+        <Text variant="paragraph" as="p" textAlign="center" marginTop="40px">
           {description}
         </Text>
         )}

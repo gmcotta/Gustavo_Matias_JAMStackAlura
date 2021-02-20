@@ -5,6 +5,7 @@ import Box from '../src/components/core/layout/Box';
 import Grid from '../src/components/core/layout/Grid';
 import Text from '../src/components/core/Text';
 import Card from '../src/components/shared/Card';
+import Footer from '../src/components/shared/Footer';
 
 export default function Home() {
   return (
@@ -19,7 +20,7 @@ export default function Home() {
         <Grid.Container>
           <Grid.Row
             height="95vh"
-            marginTop="80px"
+            marginTop="100px"
           >
             <Grid.Col
               value={{
@@ -148,8 +149,42 @@ export default function Home() {
               />
             </Grid.Col>
           </Grid.Row>
+          <Grid.Row marginBotton="40px">
+            <Grid.Col
+              value={12}
+              display="flex"
+              flexDirection="column"
+              alignItems="center"
+              justifyContent="space-between"
+            >
+              <Text
+                variant={{ xs: 'titleXS', lg: 'title' }}
+                tag="h2"
+                textAlign="center"
+                textTransform="uppercase"
+                margin="40px 0"
+              >
+                Contato
+              </Text>
+              <img
+                src="/images/maintenance.png"
+                alt="Imagem de uma pessoa sentada em uma cadeira, usando um laptop"
+                width="80%"
+              />
+              <Text
+                variant={{ xs: 'paragraph', lg: 'mediumFontParagraph' }}
+                tag="h2"
+                textAlign="center"
+                marginTop="40px"
+              >
+                Seção em construção
+              </Text>
+            </Grid.Col>
+          </Grid.Row>
+
         </Grid.Container>
       </Box>
+      <Footer />
     </>
   );
 }

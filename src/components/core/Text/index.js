@@ -22,6 +22,6 @@ Text.defaultProps = {
 
 Text.propTypes = {
   tag: PropTypes.string,
-  variant: PropTypes.string,
+  variant: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   children: PropTypes.node.isRequired,
 };

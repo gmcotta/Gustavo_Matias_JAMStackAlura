@@ -47,8 +47,7 @@ export const CardInfoSection = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   background-color: ${({ theme }) => theme.colors.common.white};
   padding: 8px;
-  height: 100%;
-  width: 100%;
 `;
