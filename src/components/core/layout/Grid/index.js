@@ -4,7 +4,6 @@ import propToStyle from '../../../../theme/utils/propToStyle';
 
 const Container = styled.div`
   width: 100%;
-  background-color: red;
   margin: auto;
 
   ${propToStyle('marginTop')};
@@ -32,7 +31,6 @@ const Container = styled.div`
 const Row = styled.div`
   display: flex;
   flex-wrap: wrap;
-  background-color: yellow;
   ${propToStyle('height')};
   ${propToStyle('marginTop')};
   ${propToStyle('marginBottom')};

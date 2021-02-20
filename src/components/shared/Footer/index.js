@@ -18,13 +18,13 @@ function Footer() {
         Feito para o bootcamp JAMStack da Alura
       </Text>
       <IconWrapper>
-        <IconButton>
+        <IconButton href="https://www.instagram.com/gmcotta34/" target="_blank" rel="noopener noreferrer">
           <Instagram />
         </IconButton>
-        <IconButton margin="0 32px">
+        <IconButton margin="0 32px" href="https://www.linkedin.com/in/gustavomatias/" target="_blank" rel="noopener noreferrer">
           <Linkedin />
         </IconButton>
-        <IconButton>
+        <IconButton href="https://github.com/gmcotta" target="_blank" rel="noopener noreferrer">
           <Github />
         </IconButton>
       </IconWrapper>

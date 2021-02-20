@@ -12,10 +12,17 @@ const TextBase = styled.span`
   ${propToStyle('marginBottom')};
   ${propToStyle('marginLeft')};
   ${propToStyle('marginRight')};
-  ${({ tag }) => {
-    if (tag === 'a') {
+
+  ${({ as, theme }) => {
+    if (as === 'a') {
       return css`
-        cursor: pointer;
+        cursor: pointer;  
+        text-decoration: none;
+        color: ${theme.colors.light.typography.main};
+
+        &:hover {
+          font-weight: 500;
+        }
       `;
     }
   }};

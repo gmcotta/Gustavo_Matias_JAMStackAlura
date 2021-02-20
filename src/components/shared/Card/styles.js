@@ -11,6 +11,13 @@ export const CardWrapper = styled.button`
   margin: 0;
   padding: 0;
   width: 100%;
+  transition: all 300ms ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+    transform: translateY(-8px);
+    box-shadow: 0 8px 8px 0px rgba(0, 0, 0, 0.25);
+  }
 `;
 
 export const CardHighlight = styled.div`

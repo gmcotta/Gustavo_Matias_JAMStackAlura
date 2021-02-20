@@ -37,7 +37,7 @@ export const IconWrapper = styled.div`
   })}
 `;
 
-export const IconButton = styled.button`
+export const IconButton = styled.a`
   display: flex;
   justify-content: center;
   align-items: center; 
@@ -45,4 +45,8 @@ export const IconButton = styled.button`
   border: 0;
   background-color: transparent;
   ${propToStyle('margin')};
+
+  &:hover {
+    cursor: pointer;
+  }
 `;

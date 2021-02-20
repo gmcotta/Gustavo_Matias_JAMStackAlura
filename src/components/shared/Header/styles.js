@@ -14,8 +14,9 @@ const HeaderWrapper = styled.header`
   z-index: 100;
 `;
 
-HeaderWrapper.LeftContent = styled.div`
+HeaderWrapper.LeftContent = styled.a`
   order: 1;
+  cursor: pointer;
 `;
 
 HeaderWrapper.CentralContent = styled.nav`
@@ -23,8 +24,7 @@ HeaderWrapper.CentralContent = styled.nav`
   width: 100%;
   display: flex;
   justify-content:space-around;
-  background-color: yellow;
-
+  
   ${transformBreakpointsIntoMediaQueries({
     md: css`{
       order: 2;
@@ -33,7 +33,17 @@ HeaderWrapper.CentralContent = styled.nav`
   })}
 `;
 
-HeaderWrapper.RightContent = styled.div`
+HeaderWrapper.RightContent = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+
+  &:hover {
+    cursor: pointer;
+  }
   order: 2;
 
   ${transformBreakpointsIntoMediaQueries({

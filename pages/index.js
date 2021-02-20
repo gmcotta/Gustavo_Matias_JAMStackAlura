@@ -30,7 +30,6 @@ export default function Home() {
               flexDirection="column"
               justifyContent="center"
               alignItems="center"
-              backgroundColor="green"
             >
               <Text
                 variant={{ xs: 'titleXS', lg: 'title' }}
@@ -54,7 +53,6 @@ export default function Home() {
               display="flex"
               justifyContent="center"
               alignItems="center"
-              backgroundColor="blue"
             >
               <img
                 src="/images/home.png"
@@ -63,7 +61,7 @@ export default function Home() {
               />
             </Grid.Col>
           </Grid.Row>
-          <Grid.Row>
+          <Grid.Row id="sobre">
             <Grid.Col
               value={12}
               display="flex"
@@ -95,7 +93,7 @@ export default function Home() {
               </Text>
             </Grid.Col>
           </Grid.Row>
-          <Grid.Row>
+          <Grid.Row id="projetos">
             <Grid.Col>
               <Text
                 variant={{ xs: 'titleXS', lg: 'title' }}
@@ -123,7 +121,7 @@ export default function Home() {
           <Grid.Row>
             <Grid.Col
               value={{ xs: 12, md: 6, lg: 4 }}
-              marginTop="16px"
+              marginTop={{ xs: '16px', md: '32px' }}
             >
               <Card
                 title="Projeto 2"
@@ -132,7 +130,7 @@ export default function Home() {
             </Grid.Col>
             <Grid.Col
               value={{ xs: 12, md: 6, lg: 4 }}
-              marginTop="16px"
+              marginTop={{ xs: '16px', md: '32px' }}
             >
               <Card
                 title="Projeto 3"
@@ -141,7 +139,7 @@ export default function Home() {
             </Grid.Col>
             <Grid.Col
               value={{ xs: 12, md: 6, lg: 4 }}
-              marginTop="16px"
+              marginTop={{ xs: '16px', md: '32px' }}
             >
               <Card
                 title="Projeto 4"
@@ -149,7 +147,7 @@ export default function Home() {
               />
             </Grid.Col>
           </Grid.Row>
-          <Grid.Row marginBotton="40px">
+          <Grid.Row id="contato">
             <Grid.Col
               value={12}
               display="flex"
