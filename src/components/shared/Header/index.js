@@ -1,8 +1,8 @@
 import React from 'react';
 
 import HeaderWrapper from './styles';
-import Logo from '../../shared/icons/Logo';
-import Dark from '../../shared/icons/Dark';
+import Logo from '../icons/Logo';
+import Dark from '../icons/Dark';
 
 export default function Header() {
   return (
@@ -13,6 +13,7 @@ export default function Header() {
       <HeaderWrapper.CentralContent>
         <span>Sobre mim</span>
         <span>Projetos</span>
+        <span>Contato</span>
       </HeaderWrapper.CentralContent>
       <HeaderWrapper.RightContent>
         <Dark />
