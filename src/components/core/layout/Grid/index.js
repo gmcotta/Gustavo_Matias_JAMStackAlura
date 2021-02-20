@@ -28,13 +28,13 @@ const Row = styled.div`
   flex-wrap: wrap;
   background-color: yellow;
   ${propToStyle('height')};
+  ${propToStyle('marginTop')};
 `;
 
 const Col = styled.div`
   flex-basis: 0;
   flex-grow: 1;
   ${propToStyle('backgroundColor')};
-
   ${propToStyle('display')};
   ${propToStyle('flexDirection')};
   ${propToStyle('justifyContent')};
@@ -48,38 +48,40 @@ const Col = styled.div`
       `;
     }
 
-    return transformBreakpointsIntoMediaQueries({
-      ...(value.xs && {
-        xs: css`
-          flex: 0 0 ${(100 * value.xs) / 12}%;
-          max-width: ${(100 * value.xs) / 12}%;
-        `,
-      }),
-      ...(value.sm && {
-        sm: css`
-          flex: 0 0 ${(100 * value.sm) / 12}%;
-          max-width: ${(100 * value.sm) / 12}%;
-        `,
-      }),
-      ...(value.md && {
-        md: css`
-          flex: 0 0 ${(100 * value.md) / 12}%;
-          max-width: ${(100 * value.md) / 12}%;
-        `,
-      }),
-      ...(value.lg && {
-        lg: css`
-          flex: 0 0 ${(100 * value.lg) / 12}%;
-          max-width: ${(100 * value.lg) / 12}%;
-        `,
-      }),
-      ...(value.xl && {
-        xl: css`
-          flex: 0 0 ${(100 * value.xl) / 12}%;
-          max-width: ${(100 * value.xl) / 12}%;
-        `,
-      }),
-    });
+    if (typeof value === 'object') {
+      return transformBreakpointsIntoMediaQueries({
+        ...(value.xs && {
+          xs: css`
+            flex: 0 0 ${(100 * value.xs) / 12}%;
+            max-width: ${(100 * value.xs) / 12}%;
+          `,
+        }),
+        ...(value.sm && {
+          sm: css`
+            flex: 0 0 ${(100 * value.sm) / 12}%;
+            max-width: ${(100 * value.sm) / 12}%;
+          `,
+        }),
+        ...(value.md && {
+          md: css`
+            flex: 0 0 ${(100 * value.md) / 12}%;
+            max-width: ${(100 * value.md) / 12}%;
+          `,
+        }),
+        ...(value.lg && {
+          lg: css`
+            flex: 0 0 ${(100 * value.lg) / 12}%;
+            max-width: ${(100 * value.lg) / 12}%;
+          `,
+        }),
+        ...(value.xl && {
+          xl: css`
+            flex: 0 0 ${(100 * value.xl) / 12}%;
+            max-width: ${(100 * value.xl) / 12}%;
+          `,
+        }),
+      });
+    }
   }};
   ${({ offset }) => {
     if (typeof offset === 'number') {

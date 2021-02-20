@@ -24,7 +24,10 @@ export default function Home() {
       >
         <Grid.Container>
           <Grid.Row
-            height="100vh"
+            height="95vh"
+            marginTop={{
+              xs: '40px',
+            }}
           >
             <Grid.Col
               value={{
@@ -36,9 +39,20 @@ export default function Home() {
               alignItems="center"
               backgroundColor="green"
             >
-              {/* variant={{xs: titleXS, md: title}} */}
-              <Text variant={{ xs: 'titleXS', lg: 'title' }} tag="h1" textAlign="center">Olá, meu nome é Gustavo</Text>
-              <Text variant={{ xs: 'subtitleXS', lg: 'subtitle' }} tag="h2" textAlign="center">E esse é meu portfolio de front-end do bootcamp JAMStack!</Text>
+              <Text
+                variant={{ xs: 'titleXS', lg: 'title' }}
+                tag="h1"
+                textAlign="center"
+              >
+                Olá, meu nome é Gustavo
+              </Text>
+              <Text
+                variant={{ xs: 'subtitleXS', lg: 'subtitle' }}
+                tag="p"
+                textAlign="center"
+              >
+                E esse é meu portfolio de front-end do bootcamp JAMStack!
+              </Text>
             </Grid.Col>
             <Grid.Col
               value={{
@@ -54,6 +68,54 @@ export default function Home() {
                 alt="Imagem de uma pessoa sentada em uma cadeira, usando um laptop"
                 width="100%"
               />
+            </Grid.Col>
+          </Grid.Row>
+          <Grid.Row>
+            <Grid.Col
+              value={12}
+              display="flex"
+              flexDirection="column"
+              alignItems="center"
+              justifyContent="space-between"
+            >
+              <Text
+                variant={{ xs: 'titleXS', lg: 'title' }}
+                tag="h2"
+                textAlign="center"
+                textTransform="uppercase"
+              >
+                Sobre mim
+              </Text>
+              <img
+                src="/images/home.png"
+                alt="Imagem de uma pessoa sentada em uma cadeira, usando um laptop"
+                width="80%"
+              />
+              <Text
+                variant={{ xs: 'smallFontParagraph', lg: 'mediumFontParagraph' }}
+                tag="h2"
+                textAlign="center"
+              >
+                Seção em construção
+              </Text>
+            </Grid.Col>
+          </Grid.Row>
+          <Grid.Row>
+            <Grid.Col>
+              <Text
+                variant={{ xs: 'titleXS', lg: 'title' }}
+                tag="h2"
+                textAlign="center"
+                textTransform="uppercase"
+              >
+                Projetos
+              </Text>
+            </Grid.Col>
+            <Grid.Col
+              value={12}
+
+            >
+              <div style={{ width: 'auto', height: '320px', backgroundColor: 'black' }} />
             </Grid.Col>
           </Grid.Row>
           <Title>My page</Title>

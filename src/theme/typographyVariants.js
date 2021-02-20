@@ -24,12 +24,22 @@ const typographyVariants = {
     fontWeight: '500',
     lineHeight: 1.25,
   },
+  largeFontParagraph: {
+    fontSize: '40px',
+    fontWeight: '400',
+    lineHeight: 1,
+  },
+  mediumFontParagraph: {
+    fontSize: '32px',
+    fontWeight: '400',
+    lineHeight: 1,
+  },
   paragraph: {
     fontSize: '24px',
     fontWeight: '400',
     lineHeight: 1,
   },
-  smallParagraph: {
+  smallFontParagraph: {
     fontSize: '16px',
     fontWeight: '400',
     lineHeight: 1,

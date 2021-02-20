@@ -9,6 +9,7 @@ const HeaderWrapper = styled.header`
   justify-content: space-between;
   position: fixed;
   top: 0;
+  padding: 16px;
   background-color: ${({ theme }) => theme.colors.light.background.main}; 
 `;
 

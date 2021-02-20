@@ -29,15 +29,25 @@ function textVariantToStyles(variant) {
     font-weight: ${({ theme }) => theme.typographyVariants.cardTitle.fontWeight};
     line-height: ${({ theme }) => theme.typographyVariants.cardTitle.lineHeight};
   `,
+    largeFontParagraph: css`
+    font-size: ${({ theme }) => theme.typographyVariants.largeFontParagraph.fontSize};
+    font-weight: ${({ theme }) => theme.typographyVariants.largeFontParagraph.fontWeight};
+    line-height: ${({ theme }) => theme.typographyVariants.largeFontParagraph.lineHeight};
+    `,
+    mediumFontParagraph: css`
+    font-size: ${({ theme }) => theme.typographyVariants.mediumFontParagraph.fontSize};
+    font-weight: ${({ theme }) => theme.typographyVariants.mediumFontParagraph.fontWeight};
+    line-height: ${({ theme }) => theme.typographyVariants.mediumFontParagraph.lineHeight};
+    `,
     paragraph: css`
     font-size: ${({ theme }) => theme.typographyVariants.paragraph.fontSize};
     font-weight: ${({ theme }) => theme.typographyVariants.paragraph.fontWeight};
     line-height: ${({ theme }) => theme.typographyVariants.paragraph.lineHeight};
   `,
-    smallParagraph: css`
-    font-size: ${({ theme }) => theme.typographyVariants.smallParagraph.fontSize};
-    font-weight: ${({ theme }) => theme.typographyVariants.smallParagraph.fontWeight};
-    line-height: ${({ theme }) => theme.typographyVariants.smallParagraph.lineHeight};
+    smallFontParagraph: css`
+    font-size: ${({ theme }) => theme.typographyVariants.smallFontParagraph.fontSize};
+    font-weight: ${({ theme }) => theme.typographyVariants.smallFontParagraph.fontWeight};
+    line-height: ${({ theme }) => theme.typographyVariants.smallFontParagraph.lineHeight};
   `,
   };
 
