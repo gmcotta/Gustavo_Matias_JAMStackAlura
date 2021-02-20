@@ -32,6 +32,8 @@ const Row = styled.div`
 `;
 
 const Col = styled.div`
+  padding-right: 16px;
+  padding-left: 16px;
   flex-basis: 0;
   flex-grow: 1;
   ${propToStyle('backgroundColor')};
@@ -39,6 +41,7 @@ const Col = styled.div`
   ${propToStyle('flexDirection')};
   ${propToStyle('justifyContent')};
   ${propToStyle('alignItems')};
+  ${propToStyle('marginTop')};
 
   ${({ value }) => {
     if (typeof value === 'number') {

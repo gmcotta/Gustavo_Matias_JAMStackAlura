@@ -87,7 +87,7 @@ export default function Home() {
                 Sobre mim
               </Text>
               <img
-                src="/images/home.png"
+                src="/images/maintenance.png"
                 alt="Imagem de uma pessoa sentada em uma cadeira, usando um laptop"
                 width="80%"
               />
@@ -111,13 +111,29 @@ export default function Home() {
                 Projetos
               </Text>
             </Grid.Col>
+          </Grid.Row>
+          <Grid.Row>
             <Grid.Col
               value={12}
-
             >
               <div style={{ width: 'auto', height: '320px', backgroundColor: 'black' }} />
             </Grid.Col>
           </Grid.Row>
+          <Grid.Row>
+            <Grid.Col
+              value={{ xs: 12, md: 6 }}
+              marginTop="16px"
+            >
+              <div style={{ width: 'auto', height: '320px', backgroundColor: 'gray' }} />
+            </Grid.Col>
+            <Grid.Col
+              value={{ xs: 12, md: 6 }}
+              marginTop="16px"
+            >
+              <div style={{ width: 'auto', height: '320px', backgroundColor: 'brown' }} />
+            </Grid.Col>
+          </Grid.Row>
+
           <Title>My page</Title>
         </Grid.Container>
       </Box>

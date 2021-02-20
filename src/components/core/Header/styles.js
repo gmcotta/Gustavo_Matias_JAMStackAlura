@@ -27,7 +27,7 @@ HeaderWrapper.CentralContent = styled.nav`
   ${transformBreakpointsIntoMediaQueries({
     md: css`{
       order: 2;
-      width: 75vw;
+      flex: 1;
     }`,
   })}
 `;
