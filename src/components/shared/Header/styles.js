@@ -11,6 +11,7 @@ const HeaderWrapper = styled.header`
   top: 0;
   padding: 16px;
   background-color: ${({ theme }) => theme.colors.light.background.main}; 
+  z-index: 100;
 `;
 
 HeaderWrapper.LeftContent = styled.div`

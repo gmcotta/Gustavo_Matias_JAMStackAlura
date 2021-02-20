@@ -24,6 +24,11 @@ const typographyVariants = {
     fontWeight: '500',
     lineHeight: 1.25,
   },
+  cardTitleXS: {
+    fontSize: '24px',
+    fontWeight: '500',
+    lineHeight: 1.25,
+  },
   largeFontParagraph: {
     fontSize: '40px',
     fontWeight: '400',

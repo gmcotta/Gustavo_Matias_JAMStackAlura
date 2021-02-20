@@ -7,6 +7,12 @@ const Container = styled.div`
   background-color: red;
   margin: auto;
 
+  ${propToStyle('marginTop')};
+  ${propToStyle('marginBottom')};
+  ${propToStyle('marginLeft')};
+  ${propToStyle('marginRight')};
+  ${propToStyle('margin')};
+
   ${transformBreakpointsIntoMediaQueries({
     sm: css`
       max-width: 600px;
@@ -29,6 +35,10 @@ const Row = styled.div`
   background-color: yellow;
   ${propToStyle('height')};
   ${propToStyle('marginTop')};
+  ${propToStyle('marginBottom')};
+  ${propToStyle('marginLeft')};
+  ${propToStyle('marginRight')};
+  ${propToStyle('margin')};
 `;
 
 const Col = styled.div`
@@ -42,6 +52,10 @@ const Col = styled.div`
   ${propToStyle('justifyContent')};
   ${propToStyle('alignItems')};
   ${propToStyle('marginTop')};
+  ${propToStyle('marginBottom')};
+  ${propToStyle('marginLeft')};
+  ${propToStyle('marginRight')};
+  ${propToStyle('margin')};
 
   ${({ value }) => {
     if (typeof value === 'number') {

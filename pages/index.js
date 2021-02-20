@@ -1,17 +1,10 @@
 import React from 'react';
-import styled from 'styled-components';
 
 import Header from '../src/components/shared/Header';
 import Box from '../src/components/core/layout/Box';
 import Grid from '../src/components/core/layout/Grid';
 import Text from '../src/components/core/Text';
 import Card from '../src/components/shared/Card';
-
-const Title = styled.h1`
-  font-size: 50px;
-  margin-top: 1000px;
-  color: ${({ theme }) => theme.colors.light.typography.main};
-`;
 
 export default function Home() {
   return (
@@ -26,9 +19,7 @@ export default function Home() {
         <Grid.Container>
           <Grid.Row
             height="95vh"
-            marginTop={{
-              xs: '40px',
-            }}
+            marginTop="80px"
           >
             <Grid.Col
               value={{
@@ -84,6 +75,7 @@ export default function Home() {
                 tag="h2"
                 textAlign="center"
                 textTransform="uppercase"
+                margin="40px 0"
               >
                 Sobre mim
               </Text>
@@ -93,9 +85,10 @@ export default function Home() {
                 width="80%"
               />
               <Text
-                variant={{ xs: 'smallFontParagraph', lg: 'mediumFontParagraph' }}
+                variant={{ xs: 'paragraph', lg: 'mediumFontParagraph' }}
                 tag="h2"
                 textAlign="center"
+                marginTop="40px"
               >
                 Seção em construção
               </Text>
@@ -108,6 +101,7 @@ export default function Home() {
                 tag="h2"
                 textAlign="center"
                 textTransform="uppercase"
+                margin="40px 0"
               >
                 Projetos
               </Text>
@@ -154,8 +148,6 @@ export default function Home() {
               />
             </Grid.Col>
           </Grid.Row>
-
-          <Title>My page</Title>
         </Grid.Container>
       </Box>
     </>

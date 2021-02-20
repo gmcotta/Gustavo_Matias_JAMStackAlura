@@ -7,6 +7,11 @@ const TextBase = styled.span`
   ${({ variant }) => textVariantToStyle(variant)};
   ${propToStyle('textAlign')};
   ${propToStyle('textTransform')};
+  ${propToStyle('margin')};
+  ${propToStyle('marginTop')};
+  ${propToStyle('marginBottom')};
+  ${propToStyle('marginLeft')};
+  ${propToStyle('marginRight')};
   ${({ tag }) => {
     if (tag === 'a') {
       return css`
