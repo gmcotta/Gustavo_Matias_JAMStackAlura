@@ -1,9 +1,11 @@
 import React from 'react';
+import { useThemeModeProvider } from '../../../context/ThemeModeContext';
 
 import HeaderWrapper from './styles';
 import Text from '../../core/Text';
 import Logo from '../icons/Logo';
 import Dark from '../icons/Dark';
+import Light from '../icons/Light';
 
 export default function Header() {
   const links = [
@@ -24,8 +26,14 @@ export default function Header() {
     },
   ];
 
+  const { themeMode, setThemeMode } = useThemeModeProvider();
+
+  function handleThemeClick() {
+    setThemeMode(themeMode === 'light' ? 'dark' : 'light');
+  }
+
   return (
-    <HeaderWrapper>
+    <HeaderWrapper themeMode={themeMode}>
       <HeaderWrapper.LeftContent href="/">
         <Logo />
       </HeaderWrapper.LeftContent>
@@ -47,8 +55,9 @@ export default function Header() {
           ))
         }
       </HeaderWrapper.CentralContent>
-      <HeaderWrapper.RightContent>
-        <Dark />
+      <HeaderWrapper.RightContent onClick={() => handleThemeClick()}>
+        {themeMode === 'light' && <Dark />}
+        {themeMode === 'dark' && <Light />}
       </HeaderWrapper.RightContent>
     </HeaderWrapper>
   );

@@ -8,8 +8,8 @@ export const FooterWrapper = styled.footer`
   flex-wrap: wrap;
   align-items: center;
   padding: 16px;
-  margin-top: 32px;
-
+  background-color: ${({ theme, themeMode }) => theme.colors[themeMode].background.main};
+  transition: background-color 300ms ease-in-out;
   ${transformBreakpointsIntoMediaQueries({
     xs: css`
       justify-content: center;
@@ -17,8 +17,8 @@ export const FooterWrapper = styled.footer`
     sm: css`
       justify-content: space-between;
     `,
-  })}
-  
+  })};
+  border-top: 1px solid ${({ theme }) => theme.colors.common.lightGray};
 `;
 
 export const IconWrapper = styled.div`

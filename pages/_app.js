@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 
 import GlobalStyle from '../src/theme/GlobalStyle';
 import theme from '../src/theme';
+import { ThemeModeProvider } from '../src/context/ThemeModeContext';
 
 export default function App({ Component, pageProps }) {
   return (
@@ -14,10 +15,12 @@ export default function App({ Component, pageProps }) {
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@400;500;700&display=swap" rel="stylesheet" />
       </Head>
-      <ThemeProvider theme={theme}>
-        <GlobalStyle />
-        <Component {...pageProps} />
-      </ThemeProvider>
+      <ThemeModeProvider>
+        <ThemeProvider theme={theme}>
+          <GlobalStyle />
+          <Component {...pageProps} />
+        </ThemeProvider>
+      </ThemeModeProvider>
     </>
   );
 }

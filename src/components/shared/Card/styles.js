@@ -2,12 +2,12 @@ import styled from 'styled-components';
 import transformBreakpointsIntoMediaQueries from '../../../theme/utils/transformBreakpointsIntoMediaQueries';
 
 export const CardWrapper = styled.button`
-  border: 4px solid ${({ theme }) => theme.colors.light.primary.color};
+  border: 4px solid ${({ theme, themeMode }) => theme.colors[themeMode].primary.color};
   display: flex;
   flex-direction: ${({ main }) => (main === 'true' ? 'row' : 'column')};
   position: relative;
   flex-wrap: wrap;
-  background-color: ${({ theme }) => theme.colors.light.background.main};
+  background-color: ${({ theme, themeMode }) => theme.colors[themeMode].background.main};
   margin: 0;
   padding: 0;
   width: 100%;
@@ -24,7 +24,8 @@ export const CardHighlight = styled.div`
   position: absolute;
   top: 16px;
   left: 16px;  
-  background-color: ${({ theme }) => theme.colors.common.white};
+  background-color: ${({ theme, themeMode }) => theme.colors[themeMode].background.main};
+  transition: background-color 300ms ease-in-out;
   padding: 4px;
   border: 4px solid ${({ theme }) => theme.colors.common.blueGray};
 `;
@@ -55,6 +56,7 @@ export const CardInfoSection = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: ${({ theme }) => theme.colors.common.white};
+  background-color: ${({ theme, themeMode }) => theme.colors[themeMode].background.main};
+  transition: background-color 300ms ease-in-out;
   padding: 8px;
 `;

@@ -1,13 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { useThemeModeProvider } from '../../../context/ThemeModeContext';
 import TextBase from './styles';
 
 function Text({
   tag, variant, children, ...props
 }) {
+  const { themeMode } = useThemeModeProvider();
   return (
-    <TextBase as={tag} variant={variant} {...props}>
+    <TextBase as={tag} variant={variant} themeMode={themeMode} {...props}>
       {children}
     </TextBase>
   );

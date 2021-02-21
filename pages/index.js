@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { useThemeModeProvider } from '../src/context/ThemeModeContext';
+
 import Header from '../src/components/shared/Header';
 import Box from '../src/components/core/layout/Box';
 import Grid from '../src/components/core/layout/Grid';
@@ -8,6 +10,8 @@ import Card from '../src/components/shared/Card';
 import Footer from '../src/components/shared/Footer';
 
 export default function Home() {
+  const { themeMode } = useThemeModeProvider();
+
   return (
     <>
       <Header />
@@ -16,6 +20,7 @@ export default function Home() {
         flex={1}
         flexWrap="wrap"
         flexDirection="column"
+        themeMode={themeMode}
       >
         <Grid.Container>
           <Grid.Row
@@ -173,7 +178,7 @@ export default function Home() {
                 variant={{ xs: 'paragraph', lg: 'mediumFontParagraph' }}
                 tag="h2"
                 textAlign="center"
-                marginTop="40px"
+                margin="40px 0"
               >
                 Seção em construção
               </Text>
