@@ -4,6 +4,7 @@ import propToStyle from '../../../theme/utils/propToStyle';
 import textVariantToStyle from '../../../theme/utils/textVariantToStyles';
 
 const TextBase = styled.span`
+  color: ${({ theme, themeMode }) => theme.colors[themeMode].typography.main};
   ${({ variant }) => textVariantToStyle(variant)};
   ${propToStyle('textAlign')};
   ${propToStyle('textTransform')};
@@ -13,12 +14,11 @@ const TextBase = styled.span`
   ${propToStyle('marginLeft')};
   ${propToStyle('marginRight')};
 
-  ${({ as, theme }) => {
+  ${({ as }) => {
     if (as === 'a') {
       return css`
         cursor: pointer;  
         text-decoration: none;
-        color: ${theme.colors.light.typography.main};
 
         &:hover {
           font-weight: 500;

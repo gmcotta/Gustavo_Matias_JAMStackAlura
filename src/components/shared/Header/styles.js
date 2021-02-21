@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+
 import transformBreakpointsIntoMediaQueries from '../../../theme/utils/transformBreakpointsIntoMediaQueries';
 
 const HeaderWrapper = styled.header`
@@ -10,8 +11,10 @@ const HeaderWrapper = styled.header`
   position: fixed;
   top: 0;
   padding: 16px;
-  background-color: ${({ theme }) => theme.colors.light.background.main}; 
+  background-color: ${({ theme, themeMode }) => theme.colors[themeMode].background.main}; 
+  transition: background-color 300ms ease-in-out;
   z-index: 100;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.common.lightGray};
 `;
 
 HeaderWrapper.LeftContent = styled.a`

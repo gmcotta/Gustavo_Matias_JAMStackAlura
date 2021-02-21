@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { useThemeModeProvider } from '../../../context/ThemeModeContext';
+
 import Text from '../../core/Text';
 import Linkedin from '../icons/Linkedin';
 import Instagram from '../icons/Instagram';
@@ -8,8 +10,9 @@ import Github from '../icons/Github';
 import { FooterWrapper, IconButton, IconWrapper } from './styles';
 
 function Footer() {
+  const { themeMode } = useThemeModeProvider();
   return (
-    <FooterWrapper>
+    <FooterWrapper themeMode={themeMode}>
       <Text
         variant={{ xs: 'smallFontParagraph', md: 'paragraph' }}
         tag="span"

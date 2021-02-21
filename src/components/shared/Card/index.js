@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { useThemeModeProvider } from '../../../context/ThemeModeContext';
 import Text from '../../core/Text';
 import {
   CardWrapper, CardHighlight, CardImage, CardInfoSection,
@@ -9,11 +10,13 @@ import {
 function Card({
   main, title, description, imageSrc,
 }) {
+  const { themeMode } = useThemeModeProvider();
+
   return (
 
-    <CardWrapper main={main}>
+    <CardWrapper main={main} themeMode={themeMode}>
       {main === 'true' && (
-      <CardHighlight>
+      <CardHighlight themeMode={themeMode}>
         <Text
           variant={{ xs: 'cardTitleXS', sm: 'cardTitle' }}
           as="span"
@@ -23,8 +26,8 @@ function Card({
         </Text>
       </CardHighlight>
       )}
-      <CardImage main={main} src={imageSrc} alt={title} />
-      <CardInfoSection>
+      <CardImage main={main} src={imageSrc} alt={title} themeMode={themeMode} />
+      <CardInfoSection themeMode={themeMode}>
         <Text
           variant="cardTitle"
           as="h3"

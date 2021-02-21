@@ -17,8 +17,10 @@ const Box = styled.div`
     lg: css`{
       padding: 0 40px;
     }`,
-
   })}
+
+  background-color: ${({ themeMode, theme }) => theme.colors[themeMode].background.main};
+  transition: background-color 300ms ease-in-out;
 `;
 
 export default Box;

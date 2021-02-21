@@ -19,7 +19,7 @@ export default {
       secondary: '#404552',
     },
     primary: {
-      color: '#F03D5F',
+      color: '#A3253D',
       contrastText: '#FFF',
     },
     typography: {
@@ -30,5 +30,6 @@ export default {
   common: {
     white: '#FFF',
     blueGray: '#B1C5D0',
+    lightGray: '#D4D4D4',
   },
 };
