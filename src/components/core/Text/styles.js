@@ -25,6 +25,7 @@ const TextBase = styled.span`
         }
       `;
     }
+    return css``;
   }};
 `;
 
