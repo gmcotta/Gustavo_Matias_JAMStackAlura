@@ -97,6 +97,8 @@ const Col = styled.div`
         }),
       });
     }
+
+    return css``;
   }};
   ${({ offset }) => {
     if (typeof offset === 'number') {

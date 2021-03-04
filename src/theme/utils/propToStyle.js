@@ -32,6 +32,8 @@ function propToStyle(propName) {
   })}
       `;
     }
+
+    return css``;
   };
 }
 
