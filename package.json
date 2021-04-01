@@ -19,7 +19,7 @@
     "styled-normalize": "^8.0.7"
   },
   "devDependencies": {
-    "@babel/preset-react": "^7.12.13",
+    "@babel/preset-react": "^7.13.13",
     "@commitlint/cli": "^12.0.1",
     "@commitlint/config-conventional": "^12.0.1",
     "babel-plugin-styled-components": "^1.8.0",
